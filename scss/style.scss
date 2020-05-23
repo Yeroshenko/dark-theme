@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: .5s all ease-in-out;
 }
 
 body {
@@ -56,9 +57,9 @@ h1 {
   height: 50px - 6;
   background-color: #FFCF96;
   border-radius: 50px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
   transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transform:  rotate(-45deg);
+  transform: rotate(-45deg);
 
   .crater {
     position: absolute;
@@ -134,7 +135,7 @@ h1 {
   z-index: 0;
   width: 2px;
   height: 2px;
-  transform: translate3d(3px,0,0);
+  transform: translate3d(3px, 0, 0);
 }
 
 .star--5 {
@@ -143,7 +144,7 @@ h1 {
   z-index: 0;
   width: 3px;
   height: 3px;
-  transform: translate3d(3px,0,0);
+  transform: translate3d(3px, 0, 0);
 }
 
 .star--6 {
@@ -152,11 +153,11 @@ h1 {
   z-index: 0;
   width: 2px;
   height: 2px;
-  transform: translate3d(3px,0,0);
+  transform: translate3d(3px, 0, 0);
 }
 
 input:checked {
-  + .toggle {
+  +.toggle {
     background-color: #749DD6;
 
     &:before {
@@ -171,7 +172,9 @@ input:checked {
       background-color: #FFE5B5;
       transform: translate3d(40px, 0, 0) rotate(0);
 
-      .crater { opacity: 1; }
+      .crater {
+        opacity: 1;
+      }
     }
 
     .star--1 {
@@ -195,17 +198,19 @@ input:checked {
     .star--5,
     .star--6 {
       opacity: 1;
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
+
     .star--4 {
       transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
+
     .star--5 {
       transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
+
     .star--6 {
       transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
   }
 }
-
