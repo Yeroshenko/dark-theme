@@ -1,48 +1,18 @@
+/* Goole fonts */
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+/* Other scss */
 :root {
   --color-body-background: #F0F8FF;
   --text-color: #111111;
+  --lines-color: rgba(0, 0, 0, .035);
 }
 
 [dark] * {
   --color-body-background: #111111;
   --text-color: #FBF6F6;
+  --lines-color: rgba(255, 255, 255, .05);
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: .5s all ease-in-out;
-  transition: .5s all ease-in-out;
-}
-
-body {
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: 'Major Mono Display', monospace;
-  background-color: var(--color-body-background);
-}
-
-h1 {
-  font-size: 5.5em;
-  color: var(--text-color);
-}
-
-/* SWITCH */
 .toggleWrapper {
   margin-top: 20px;
   overflow: hidden;
@@ -245,4 +215,71 @@ input:checked + .toggle .star--5 {
 input:checked + .toggle .star--6 {
   -webkit-transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: background-color .5s, color .5s, border-color .5s ease-in-out;
+  transition: background-color .5s, color .5s, border-color .5s ease-in-out;
+}
+
+body {
+  font-family: 'Major Mono Display', monospace;
+  background-color: var(--color-body-background);
+}
+
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  font-size: 5.5em;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.lines {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+}
+
+.i-line {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid var(--lines-color);
+  z-index: -1;
+}
+
+.i-line:last-child {
+  border-right: 1px solid var(--lines-color);
 }

@@ -1,9 +1,11 @@
 :root {
   --color-body-background: #F0F8FF;
   --text-color: #111111;
+  --lines-color: rgba(0, 0, 0, .035);
 }
 
 [dark] * {
   --color-body-background: #111111;
   --text-color: #FBF6F6;
+  --lines-color: rgba(255, 255, 255, .05);
 }
